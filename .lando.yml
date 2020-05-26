@@ -1,0 +1,33 @@
+---
+name: lando-seed-db-postgres
+services:
+  appserver:
+    type: postgres:10
+  db:
+    type: postgres:10
+    portforward: true
+    creds:
+      user: dba
+      password: password
+      database: example
+
+tooling:
+  verify:
+    service: db
+    cmd: psql -U postgres example -c \l
+  psql:
+    service: db
+    cmd: psql -U postgres
+  'db-import <file>':
+    service: :host
+    description: Imports a dump file into a database service
+    cmd: /helpers/sql-import.sh
+    options:
+      host:
+        description: The database service to use
+        default: db
+        alias:
+          - h
+      no-wipe:
+        description: Do not destroy the existing database before an import
+        boolean: true
