@@ -1,9 +1,9 @@
-# Lando Seed DB - MySQL
+# Lando Seed DB - Postgres
 
-Lando Seed DB - MySQL is a starter project for a [Lando](https://lando.dev)-based development
+Lando Seed DB - Postgres is a starter project for a [Lando](https://lando.dev)-based development
 environment. My main goal is to provide a useful function right out of the
 box: as soon as you run `lando start` the first time, you will get a
-containerized MySQL development environment, capable of importing data from
+containerized PostgreSQL development environment, capable of importing data from
 dumps of other databases (like, say your production data). This supports the
 use case of experimenting with writing potentially destructive queries for
 your production data, all from the comfort of your own computer.
@@ -26,16 +26,13 @@ Clone/check out this project, then run `lando start` from the root
 directory of this project.
 
 Try some of these other commands:
-* `lando mysql` Run Arbritrary MySQL commands via the CLI for MySQL.
+* `lando psql` Run Arbritrary MySQL commands via the CLI for MySQL.
 * `lando db-import <file>`  Import a dump file into the database.
 * `lando` Show all availble Lando commands.
 
 ## What's Next?
 
-That's kinda up to you. But, here's a suggestion, if you're just in the mood
-to explore: try adding [PHPMyAdmin](https://docs.lando.dev/config/phpmyadmin.html#supported-versions) to this dev environment.
-
-Or, you know, if you have a MySQL client you like (I'm partial to [TablePlus](https://www.tableplus.io/download) myself), fire it up and point it at `localhost:3306`
+That's kinda up to you.  If you have an SQL client you like (I'm partial to [TablePlus](https://www.tableplus.io/download) myself), fire it up and point it at `localhost:5432`
 
 ## Contributing
 
