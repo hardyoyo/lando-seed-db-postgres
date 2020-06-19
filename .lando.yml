@@ -1,14 +1,12 @@
 ---
 name: lando-seed-db-postgres
 services:
-  appserver:
-    type: postgres:10
   db:
     type: postgres:10
     portforward: true
     creds:
-      user: dba
-      password: password
+      user: postgres
+      password: 
       database: example
 
 tooling:

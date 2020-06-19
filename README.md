@@ -30,6 +30,8 @@ Try some of these other commands:
 * `lando db-import <file>`  Import a dump file into the database.
 * `lando` Show all availble Lando commands.
 
+> Note: Lando relies on you to only use the postgres user, and no password. It's just the way it is. [Read more](https://docs.lando.dev/config/postgres.html#configuration) if you're curious.
+
 ## What's Next?
 
 That's kinda up to you.  If you have an SQL client you like (I'm partial to [TablePlus](https://www.tableplus.io/download) myself), fire it up and point it at `localhost:5432`
